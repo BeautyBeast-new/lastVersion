@@ -129,7 +129,7 @@ li {
     margin: 40px;
     padding: 25px;
     box-sizing: border-box;
-    height: 85vh;
+    height: 92vh;
     background-color: white;
     border-radius: 36px;
     display: grid;
@@ -177,7 +177,7 @@ p.text-right {
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* 两列布局 */
-    gap: 10px 20px;
+    gap: 0px 20px;
     /* 10px纵向间距，20px横向间距 */
 }
 
@@ -209,8 +209,8 @@ select {
 
 .submit-btn {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    top: 20px;
+    right: 25px;
     margin-top: 20px;
     
     padding: 10px 20px;

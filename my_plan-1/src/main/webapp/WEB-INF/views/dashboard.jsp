@@ -25,6 +25,30 @@
     <!-- 引入自定義 CSS -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/asset7/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sentences = [
+                "成功屬於那些不懈努力的人",
+                "我的健身計劃：我努力了，但沙發贏了",
+                "流汗，是脂肪在哭泣",
+                "健身不只是為了好看，還是為了能多吃點好吃的！",
+                "健身時，想著美食，那是前進的動力！",
+                "每一次舉重都是在告訴自己：下一塊蛋糕是值得的",
+                "流汗是脂肪在哭泣，我只是在幫它們找到出口",
+                "每天多做一點，只為未來的自己感謝現在的你",
+                "今天的努力是明天的成就",
+                "每天的訓練都是對自己的投資，不僅是外在，還有內在"
+            ];
+            
+            function getRandomSentence() {
+                var randomIndex = Math.floor(Math.random() * sentences.length);
+                return sentences[randomIndex];
+            }
+            
+            var h3Element = document.querySelector('h3');
+            h3Element.textContent = getRandomSentence();
+        });
+    </script>
     <style>
         /* 您的自定義 CSS 可以放在這裡 */
          .form-grid {
@@ -145,6 +169,7 @@
 					<span class="arrow_l_int"></span>
 				    <span class="arrow_l_out"></span>
 					<h2>總共攝取<%= totalCalories != null ? totalCalories : 0 %>大卡</h2>
+					<h3></h3>
 				</div>
                 </div>
             </div>

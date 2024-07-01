@@ -115,6 +115,10 @@
                 <input class="chooseface" type="file"  id="chooseface" value=""><br>
                 <label class="contact-label" for="nickname">HI  <input type="text" name="nickname" id="nickname" placeholder="暱稱" value="">
                 </label>
+                <p class="text-right">
+                    <input class="submit-btn" type="submit" value="儲存" onclick="updateUser()">
+                </p>
+                
             </div>
             <form id="userForm">
                 <div class="form-grid">
@@ -160,10 +164,34 @@
                         <label class="contact-label" for="weight">體重</label>
                         <input type="text" name="weight" id="weight" placeholder="請輸入體重" value="" required>
                     </div>
+                    <div class="form-group">
+                        <label class="contact-label" for="goal">健身目標</label>
+                        <select name="goal" id="goal">
+                           
+                            <option value="muscle">增加肌肉</option>
+                            <option value="weight_loss">瘦身減重</option>
+                            <option value="health">保持健康</option>
+                        </select>
+                    </div>
+                    <!-- 2.習慣 -->
+                    <div class="form-group">
+                        <label class="contact-label" for="habit">每周訓練量</label>
+                        <select name="habit" id="habit">
+                            <option selected="true" disabled>==下列請選擇==</option>
+                            <option value="1">久坐</option>
+                            <option value="2">輕度活動</option>
+                            <option value="3">中度活動</option>
+                            <option value="4">高度活動</option>
+                            <option value="5">超高度活動</option>
+                        </select>
+                    </div>
+                    <!-- 3.體重 -->
+                    <div class="form-group">
+                        <label class="contact-label" for="targetweight">目標體重</label>
+                        <input type="text" name="targetweight" id="targetweight" placeholder="請輸入體重" required>
+                    </div>
                 <!-- 送出表單按钮 -->
-                <p class="text-right">
-                    <input class="submit-btn" type="submit" value="儲存" onclick="updateUser()">
-                </p>
+                
                 </div>
             </form>            
         </div>
@@ -219,7 +247,8 @@
                         height: 'height_cm',
                         weight: 'current_weight',
                         goal: 'purpose',
-                        habit: 'activity_level'
+                        habit: 'activity_level',
+                        targetweight: 'target_weight'
                     };
 
                     for (var field in fieldMapping) {
@@ -299,7 +328,10 @@ function updateUser() {
      phone: document.getElementById('tel').value,
      height_cm: document.getElementById('height').value,
      current_weight: document.getElementById('weight').value,
-     face: document.getElementById('preview').src 
+     face: document.getElementById('preview').src,
+     purpose:document.getElementById('goal').value,
+     target_weight: document.getElementById('targetweight').value,
+     activity_level: document.getElementById('habit').value
  };
 
  if (file) {

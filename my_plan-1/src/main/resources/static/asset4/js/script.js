@@ -114,7 +114,7 @@ function validateForm1(event) {
     if (gender && birth && height) {
         // 所有字段都已填寫，進行下一步
         submitPart1();
-        window.location.href = '/views/question2';
+        window.location.href = '/views/question2r';
     } else {
         // 有字段未填寫，顯示警告信息
         alert('請填寫所有欄位');
@@ -130,7 +130,7 @@ function validateForm2(event) {
     if (mainGoal !== "==請選擇==" && nowWeight && goalWeight) {
         // 所有字段都已填寫，進行下一步
         submitPart2();
-        window.location.href = '/views/question3';
+        window.location.href = '/views/question3r';
         
     } else {
         // 有字段未填寫，顯示警告信息
@@ -145,7 +145,7 @@ function validateForm3(event) {
     if (waterAns) {
         // 所有字段都已填寫，進行下一步
         submitPart3();
-        window.location.href = '/views/question4';
+        window.location.href = '/views/question4r';
         
     } else {
         // 有字段未填寫，顯示警告信息
@@ -160,7 +160,7 @@ function validateForm4(event) {
     if (exerciseAns) {
         // 所有字段都已填寫，進行下一步
         submitPart4();
-        window.location.href = '/views/signIn';
+        window.location.href = '/views/signIn-r';
         
     } else {
         // 有字段未填寫，顯示警告信息
@@ -186,7 +186,7 @@ function validateForm5(event) {
             .then(function (res) {
                 sessionStorage.setItem('response', JSON.stringify(res.data));
                 sessionStorage.setItem('response1', JSON.stringify(res.data));
-                window.location.href = '/views/login';
+                window.location.href = '/views/loginr';
             })
             .catch(function (error) {
                 console.error('There was an error!', error);
@@ -222,5 +222,5 @@ document.addEventListener('DOMContentLoaded', function() {
 const hamBurger = document.querySelector(".toggle-btn");
 
 hamBurger.addEventListener("click", function () {
-  document.querySelector("#sidebar").classList.toggle("expand");
+document.querySelector("#sidebar").classList.toggle("expand");
 });

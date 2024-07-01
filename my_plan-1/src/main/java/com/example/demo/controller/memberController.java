@@ -194,4 +194,14 @@ public class memberController {
 	   	return "th/dressup2";
 	   }
 	   
+	   @GetMapping("/test4")
+	    public String test2() {
+	        return "loginr";
+	    }
+	   @GetMapping("/ques1r")
+	    public String ques1() {
+	        return "question1r";
+	    }
+	   
+	   
 }

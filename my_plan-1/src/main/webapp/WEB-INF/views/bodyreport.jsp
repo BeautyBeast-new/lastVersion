@@ -62,13 +62,13 @@
                     </a>
                     <ul id="member" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="/index" class="sidebar-link">個人資訊</a>
+                            <a href="/views/index" class="sidebar-link">個人資訊</a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="/goal" class="sidebar-link">健身目標</a>
+                            <a href="/views/goal" class="sidebar-link">健身目標</a>
                         </li>
                          <li class="sidebar-item">
-                            <a href="/bodyreport" class="sidebar-link">個人健康報表</a>
+                            <a href="/views/bodyreport" class="sidebar-link">個人健康報表</a>
                         </li>
                     </ul>
                 </li>
@@ -312,10 +312,10 @@
     	                        console.log("Height, weight, or BMI element not found.");
     	                    }
     	                    // BMR計算
-    	                    if(sex.value == "male"){
+    	                    if(sex.value == "男性"){
     	                        const bmr = 13.7 * weight.value + 5 * height.value - 6.8 * age.value + 66;
     	                        document.getElementById("bmr").value = bmr.toFixed(2);
-    	                    } else if(sex.value == "female"){
+    	                    } else if(sex.value == "女性"){
     	                        const bmr = 9.6 * weight.value + 1.8 * height.value - 4.7 * age.value + 655;
     	                        document.getElementById("bmr").value = bmr.toFixed(2);
     	                    }
